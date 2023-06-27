@@ -1,0 +1,47 @@
+.promo-code {
+  padding: 1.6rem 2.4rem;
+  background-color: #00923A;
+  margin-bottom: 1.6rem;
+  border-radius: 2rem;
+  opacity: 0;
+  animation: show 1s forwards;
+  text-align: center;
+  color: white;
+  pointer-events: all;
+
+  &__title {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__code {
+    font-size: 2.4rem;
+    vertical-align: middle;
+  }
+
+  &__copy {
+    vertical-align: middle;
+    margin-left: 1.2rem;
+    width: 2.4rem;
+    height: auto;
+    cursor: pointer;
+  }
+
+  :global(.landscape) & {
+    margin-bottom: 9.5rem;
+    padding: 1.6rem 6.4rem;
+  }
+
+  :global(.landscape) &__title {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+  }
+
+  :global(.landscape) &__code {
+    font-size: 4rem;
+  }
+}
+
+@keyframes show {
+  to {opacity: 1}
+}

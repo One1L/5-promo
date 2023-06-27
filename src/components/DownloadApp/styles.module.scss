@@ -1,0 +1,61 @@
+.download-app {
+  text-align: center;
+  animation: show 1s forwards;
+  opacity: 0;
+  z-index: 1;
+  position: relative;
+  text-decoration: none;
+  pointer-events: all;
+  &__qr {
+    width: 16.4rem;
+    height: auto;
+    margin-bottom: 1.5rem;
+    display: none;
+    border-radius: 1.2rem;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+    animation: attract-attention 5s infinite alternate;
+  }
+  &__logo {
+    width: 7.3rem;
+    height: auto;
+    box-shadow: 0px 0px 20px 0px #00000040;
+    border-radius: 1rem;
+    margin-bottom: .9rem;
+    animation: attract-attention 5s infinite alternate;
+  }
+  &__text {
+    padding: 0 5rem;
+    margin-bottom: 2rem;
+    color: #582D2B;
+    font-size: 1.4rem;
+    line-height: 89.023%;
+    animation: attract-attention 5s infinite alternate;
+  }
+
+  :global(.landscape) &__qr {
+    display: inline;
+  }
+
+  :global(.landscape) &__logo {
+    width: 6rem;
+    height: auto;
+    position: absolute;
+    top: -3.7rem;
+    left: calc(50% - 3rem);
+    margin-bottom: 0;
+  }
+
+  :global(.landscape) &__text {
+    font-size: 3.2rem;
+  }
+}
+
+@keyframes show {
+  to {opacity: 1}
+}
+
+@keyframes attract-attention {
+  50% {transform: translateY(0)}
+  60% {transform: translateY(-30%)}
+  70% {transform: translateY(0)}
+}

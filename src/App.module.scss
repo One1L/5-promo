@@ -1,0 +1,109 @@
+@import "./res/scss/fonts.scss";
+
+:global(html) {
+  background-color: #FFE4B8;
+  font-family: '5ka Sans Design Black';
+  font-weight: 900;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    user-select: none;
+  }
+
+  &__logo {
+    margin-top: 1.6rem;
+    font-weight: bold;
+  }
+
+  &__discount-and-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__discount {
+    font-size: 10rem;
+    line-height: 80%;
+    background-clip: text;
+    color: transparent;
+    background-image: url('./res/discount-bg.svg'), linear-gradient(135deg, #EB4023 7.2%, #FF8807 100.7%);
+    background-size: 100% 100%;
+    margin-top: 2.3rem;
+  }
+
+  &__description {
+    background-image: linear-gradient(135deg, #EB4023 7.2%, #FF8807 100.7%);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.4rem;
+    letter-spacing: -0.56px;
+    text-align: center;
+    margin: .8rem 2.8rem 0;
+  }
+
+  &__bottom {
+    position: relative;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__footer {
+    font-size: .6rem;
+    background: #FFF7EA;
+    padding: .7rem 1.6rem .8rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+  }
+
+  :global(.landscape) &__logo {
+    margin-top: 6rem;
+  }
+
+  :global(.landscape) &__discount-and-description {
+    flex-direction: row;
+    margin-top: 6.1rem;
+  }
+
+  :global(.landscape) &__discount {
+    margin-top: 0;
+    font-size: 15.6rem;
+  }
+
+  :global(.landscape) &__description {
+    font-size: 3.2rem;
+    width: 58.8rem;
+    margin-top: 0;
+  }
+
+  :global(.landscape) &__footer {
+    padding: 1.2rem 2rem;
+    width: 100%;
+    font-size: .9rem;
+  }
+
+  :global(.landscape) &__footer-inner {
+    max-width: 76.8rem;
+    margin: 0 auto;
+  }
+}
