@@ -36,7 +36,7 @@ const App = () => {
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       const {data: response} = await axios.get(
-        `http://192.168.27.9:1337/api/get-promocode/${urlParams.get('utm_campaign')}/${urlParams.get('utm_source')}`
+        `/api/get-promocode/${urlParams.get('utm_campaign')}/${urlParams.get('utm_source')}`
       );
       localStorage.setItem('promocode', response.value);
       setPromocode(response.value);
