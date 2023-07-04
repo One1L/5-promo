@@ -10,7 +10,7 @@ const PromoCode = ({ promocode }) => {
       <span ref={promocodeValueRef} className={classes['promo-code__code']}>{promocode}</span>
       <img className={classes['promo-code__copy']}
         src={copyPath}
-        onClick={() => navigator.clipboard.writeText('foo')}
+        onClick={() => navigator.clipboard.writeText(promocode)}
       />
     </div>
   </div>;
